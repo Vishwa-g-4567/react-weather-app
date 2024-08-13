@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import ScrollReveal from "scrollreveal";
 import { DataContext } from "../App";
 
 const DailyForecast = () => {
