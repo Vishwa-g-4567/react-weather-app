@@ -1,15 +1,9 @@
 import React, { useContext } from "react";
-import ScrollReveal from "scrollreveal";
 import { DataContext } from "../App";
 
 const HourlyForecast = () => {
   const { hourly } = useContext(DataContext);
-  ScrollReveal().reveal(".hour-container", {
-    easing: "ease-out",
-    interval: 250,
-    distance: "90px",
-    origin: "left",
-  });
+
   return (
     <>
       <div className="hidden w-full min-[700px]:block">
@@ -20,7 +14,7 @@ const HourlyForecast = () => {
           {hourly.map((data, index) => (
             <div
               key={index}
-              className="hour-container py-[0.8em] w-[12%] rounded-md bg-black/15 text-[1.125em] text-center min-[880px]:w-[5em]"
+              className="py-[0.8em] w-[12%] rounded-md bg-black/15 text-[1.125em] text-center min-[880px]:w-[5em]"
             >
               <div className="text-white/60 text-[0.83em]">{data.date}</div>
               <div className="text-[0.83em]">{data.time}</div>

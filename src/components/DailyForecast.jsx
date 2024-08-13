@@ -4,10 +4,7 @@ import { DataContext } from "../App";
 
 const DailyForecast = () => {
   const { daily, units } = useContext(DataContext);
-  ScrollReveal().reveal(".daily-container", {
-    easing: "ease-out",
-    interval: 250,
-  });
+
   return (
     <>
       <div className="w-full">
@@ -18,7 +15,7 @@ const DailyForecast = () => {
           {daily.map((data, index) => (
             <div
               key={index}
-              className="daily-container flex flex-wrap justify-around items-center mb-[0.3em] py-[0.8em] w-full rounded-md bg-black/20 text-[1.19em] text-center"
+              className="flex flex-wrap justify-around items-center mb-[0.3em] py-[0.8em] w-full rounded-md bg-black/20 text-[1.19em] text-center"
             >
               <div className="w-1/3 text-[0.95em] mb-[0.6em] min-[450px]:w-1/6 min-[450px]:-order-2">
                 {data.day}
